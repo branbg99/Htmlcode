@@ -1,0 +1,14 @@
+\documentclass[border=0pt]{standalone}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=2]
+\begin{axis}[colormap/viridis, samples=20, domain=-3:3]
+\addplot3[surf]{ (1 - (x^2 + y^2))*exp(- (x^2 + y^2)/2) };
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
